@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css" /> -->
+		<title>Burger Builder</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+		<!-- <script src="/assets/js/cats.js"></script> -->
+	<style>
+	body {
+		background-image: url("../../public/assets/images/background.png");
+		background-repeat: repeat;
+		background-color: #414042;
+		/*background-position: center center;*/
+		background-attachment: fixed;
+		/*background-size: cover;*/
+	}
+	.jumbotron {
+		background: none;
+		margin: auto;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+		display: block;
+	}
+	#stripe {
+		background: rgba(65, 64, 66, 0.8);
+		width:80%;
+		margin: auto;
+		min-height: 1000px;
+	}
+	#orderWell {
+		width: 80%;
+		margin: auto;
+		position: relative;
+		z-index: 0;
+	}
+	.well, .panel {
+		background-color: #58595b;
+		border: #333333 solid 1px;
+		box-shadow: 5px 5px 8px #333333;
+	}
+
+	.panel {
+		width: 45%;
+		margin: auto;
+		/*border: #333333 solid 1px;*/
+	}
+	.btn-warning{
+		background-color: #ffd600;
+	}
+	.panel-success > .panel-heading {
+		background-color: #8dc63f;
+		color: white;
+	}
+	.panel-heading > h2 {
+		font-size: 18pt;
+	}
+	.panel-danger > .panel-heading {
+		background-color: #ed1c24;
+		color: white;
+	}
+	.panel-body > .well {
+		border: #a7a9ac solid 1px;
+		background-color: grey; 
+		position: relative;
+	}
+	#server {
+		position: absolute;
+		z-index: 50;
+		bottom: 0px;
+		left: -40px;
+		width: 230px;
+		height: auto;
+		margin: 0px 0px;
+	}
+	.form-group {
+		position: relative;
+		z-index: 1;
+		padding-left: 175px;
+	}
+	label, .panel-title, h5, h4 {
+		font-family:'Roboto Condensed', sans-serif;
+	}
+	</style>
+
+	</head>
+	<body>
+		<!-- {{{ body }}} -->
+
+		<div class="container">
+			<div id="stripe">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- <div id="stripe"> -->
+						<div class="jumbotron">
+					      <img src="../../public/assets/images/burger-builder-logo.png" alt="Burger Builder Logo" width="729" height="218">
+					  	</div>
+					<!-- </div> -->
+					
+					<div id="orderWell" class="well well-lg">
+						
+						
+						<form>
+						  <div class="form-group">
+						    <label for="order" style="color: #ffd600; margin-right: 10px; font-size: 14pt">ORDER HERE</label>
+						    <input type="text" class="form-control" id="order" placeholder="What' cha Having?" style="font-style: italic">
+						  </div> <br><br>
+						  
+						  <button type="submit" class="btn btn-warning" style="color: #58595b; position: absolute; right:25px; bottom: 20px"><b>SUBMIT ORDER</b></button>
+						</form>
+						<img id="server" src="../../public/assets/images/server.png" width="193" height="161">
+					</div>
+					<br><br>
+
+					<div>
+						<div class="row" style="width: 80%; margin: auto">
+							<div id="readyToEat" class="panel panel-success" style="float: left">
+							  <div class="panel-heading">
+							    <h2 class="panel-title" style="text-align: center"><b>READY TO EAT</b></h2>
+							  </div>
+							  <div class="panel-body">
+							    <div class="well">
+							    <h4 style="color:white"> BURGER GOES HERE </h4> 
+							    <br>
+									<button id="devour" type="submit" class="btn btn-warning" style="font-size: 8pt; position: absolute; right: 10px; bottom: 10px; color:#58595b"><b>DEVOUR</b></button>
+							    </div>
+
+							    <div class="well">
+							    <h4 style="color:white"> BURGER GOES HERE </h4> 
+							    <br>
+									<button type="submit" class="btn btn-warning" style="font-size: 8pt; position: absolute; right: 10px; bottom: 10px; color:#58595b"><b>DEVOUR</b></button>
+							    </div>
+
+
+							  </div>
+							</div>
+							
+							<div id="eaten" class="panel panel-danger" style="float:right">
+							  <div class="panel-heading">
+							    <h2 class="panel-title" style="text-align: center"><b>THAT WAS TASTY</b></h2>
+							  </div>
+							  <div class="panel-body">
+							   <div class="well">
+							    <h4 style="color:white"> EATEN BURGER GOES HERE </h4> 
+							    
+							    </div>
+							  </div>
+							</div>
+
+						</div>
+					</div>
+					
+			</div> <!-- closes row containing jumbotron -->
+
+
+
+
+	    </div> <!-- closes vertical stripe div -->
+    </div> <!-- closes container -->
+
+
+
+	</body>
+</html>

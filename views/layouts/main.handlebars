@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css" /> -->
+		<title>Burger Builder</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Slab" rel="stylesheet">
+		<!-- <script src="/assets/js/cats.js"></script> -->
+		<style>
+	body {
+		background-image: url("../../assets/images/background.png");
+		background-repeat: repeat;
+		background-color: #414042;
+		background-attachment: fixed;
+		padding-bottom: 150px;
+	}
+	.jumbotron {
+		background: none;
+		margin: auto;
+		padding-top: 20px;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+		display: block;
+	}
+	#stripe {
+		background: rgba(65, 64, 66, 0.8);
+		width:80%;
+		margin: auto;
+		min-height: 1200px;
+		height: auto;
+	}
+	#orderWell {
+		width: 80%;
+		margin: auto;
+		position: relative;
+		z-index: 0;
+	}
+	.well, .panel {
+		background-color: #58595b;
+		border: #333333 solid 1px;
+		box-shadow: 5px 5px 8px #333333;
+	}
+
+	.panel {
+		width: 45%;
+		margin: auto;
+		/*border: #333333 solid 1px;*/
+	}
+	.btn-warning{
+		background-color: #ffd600;
+	}
+	.panel-success > .panel-heading {
+		background-color: #8dc63f;
+		color: white;
+	}
+	.panel-heading > h2 {
+		font-size: 18pt;
+	}
+	.panel-danger > .panel-heading {
+		background-color: #ed1c24;
+		color: white;
+	}
+	.panel-body > .well {
+		border: #a7a9ac solid 1px;
+		background-color: grey; 
+		position: relative;
+	}
+	#server {
+		position: absolute;
+		z-index: 50;
+		bottom: 0px;
+		left: -40px;
+		width: 230px;
+		height: auto;
+		margin: 0px 0px;
+	}
+	.form-group {
+		position: relative;
+		z-index: 1;
+		padding-left: 175px;
+	}
+	label, .panel-title, h5, h4 {
+		font-family:'Roboto Condensed', sans-serif;
+	}
+	</style>
+
+	</head>
+	<body>
+		{{{ body }}}
+
+
+		<!-- <script>
+
+		$(function() {
+		  $("#devourButton").on("click", function(event) {
+		    var id = $(this).data("id");
+		    var newDevourState = $(this).data("newsleep");
+
+		    var newSleepState = {
+		      sleepy: newSleep
+		    };
+
+		    // Send the PUT request.
+		    $.ajax("/api/cats/" + id, {
+		      type: "PUT",
+		      data: newSleepState
+		    }).then(
+		      function() {
+		        console.log("changed sleep to", newSleep);
+		        // Reload the page to get the updated list
+		        location.reload();
+		      }
+		    );
+		  });
+		});
+
+		</script> -->
+	</body>
+</html>

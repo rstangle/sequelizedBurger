@@ -1,0 +1,73 @@
+<div class="container">
+			<div id="stripe">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- <div id="stripe"> -->
+						<div class="jumbotron">
+					      <img src="../assets/images/burger-builder-logo.png" alt="Burger Builder Logo" width="729" height="218">
+					  	</div>
+					<!-- </div> -->
+
+					<div id="orderWell" class="well well-lg">
+						<form action="/" method="POST">
+						  <div class="form-group">
+						    <label for="orderInformation" style="color: #ffd600; margin-right: 10px; font-size: 18pt">ORDER HERE</label>
+						    <input type="text" name="burger" class="form-control" id="order" placeholder="What' cha Having?" style="font-style: italic">
+						  </div> <br><br>
+						  
+						  <button type="submit" class="btn btn-warning" style="color: #58595b; position: absolute; right:25px; bottom: 20px"><b>SUBMIT ORDER</b></button>
+						</form>
+						<img id="server" src="../assets/images/server.png" width="193" height="161">
+					</div>
+					<br><br>
+
+					<div>
+						<div class="row" style="width: 80%; margin: auto">
+							<div id="readyToEat" class="panel panel-success" style="float: left">
+							  <div class="panel-heading">
+							    <h2 class="panel-title" style="text-align: center"><b>READY TO EAT</b></h2>
+							  </div>
+							  <div class="panel-body">
+							    
+							    {{#each burgers}}
+							    	{{#unless devoured}}
+							    		<div class="well">
+							    			<h4 style="color:white"> {{burger_name}} </h4> 
+							    			<br>
+											<button id="devourButton" data-id="{{id}}" type="submit" class="btn btn-warning" style="font-size: 8pt; position: absolute; right: 10px; bottom: 10px; color:#58595b"><b>DEVOUR</b></button>
+							    		</div>
+							    	{{/unless}}
+							    {{/each}}
+
+							   
+							  </div>
+							</div>
+							
+							<div id="eaten" class="panel panel-danger" style="float:right">
+							  <div class="panel-heading">
+							    <h2 class="panel-title" style="text-align: center"><b>TASTY!</b></h2>
+							  </div>
+
+							  <div class="panel-body">
+							   
+							  	{{#each burgers}}
+							  		{{#if devoured}}
+							   			<div class="well">
+							   				<h4 style="color:white"> {{burger_name}} </h4> 
+							   			</div>
+							   		{{/if}}
+							   	{{/each}}
+
+							  </div>
+							</div>
+
+						</div>
+					</div>
+					
+			</div> <!-- closes row containing jumbotron -->
+
+
+
+
+	    </div> <!-- closes vertical stripe div -->
+    </div> <!-- closes container -->
